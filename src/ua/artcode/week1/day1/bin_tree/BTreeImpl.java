@@ -48,6 +48,6 @@ public class BTreeImpl implements BTree {
 
     @Override
     public boolean contains(Comparable el) {
-        return true;
+        return false;
     }
 }
