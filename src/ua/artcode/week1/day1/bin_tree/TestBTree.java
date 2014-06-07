@@ -7,13 +7,13 @@ public class TestBTree {
 
 
     public static void main(String[] args) {
-        Integer[] mas = {50,12,78,45,99,1,-56};
+        Integer[] mas = {33,22,56,34,12,12,45,23};
 
         System.out.println();
         System.out.println();
         BTree bTree = new BTreeImpl();
-        for(Integer i : mas){
-            bTree.add(i);
+        for(Integer a : mas){
+            bTree.add(a);
         }
         System.out.println("Some");
     }
