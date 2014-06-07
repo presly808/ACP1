@@ -31,7 +31,7 @@ public class BTreeImpl implements BTree {
     }
 
     public void add(Node temp, Comparable el){
-        if(temp.value.compareTo(el) < 0) {
+        if(el.compareTo(temp.value) > 0) {
             if(temp.rChild == null){
                 temp.rChild = new Node(el, null, null);
             } else {
