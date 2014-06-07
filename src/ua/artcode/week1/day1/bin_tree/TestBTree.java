@@ -12,6 +12,7 @@ public class TestBTree {
         System.out.println();
         System.out.println();
         BTree bTree = new BTreeImpl();
+        System.out.println("Test comm");
         for(Integer a : mas){
             bTree.add(a);
         }
