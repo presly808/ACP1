@@ -11,10 +11,7 @@ public class Test {
     // Ctrl + Space
     public static void main(String[] args) {
         System.out.println("conflict");
-
-
         int[] mas = {56,123,1,56,88,907,23};
-
         Arrays.sort(mas);
     }
 
