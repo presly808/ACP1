@@ -1,13 +1,14 @@
 package ua.artcode.week2.day2.ReflectionFileHelper;
 
 import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created by vkucheru on 15.06.2014.
  */
 public class Saver implements ISaver {
     @Override
-    public void save(Object o) throws IllegalAccessException {
+    public void save(Object o) throws IllegalAccessException, IOException {
         ClassInfo classInfo = new ClassInfo();
         String className = classInfo.getClass(o);
         String[] classFields = classInfo.getFieldInfo(o);
@@ -22,6 +23,7 @@ public class Saver implements ISaver {
 
     @Override
     public Object load() {
+
         return null;
     }
 }
