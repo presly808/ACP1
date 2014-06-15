@@ -1,7 +1,5 @@
 package ua.artcode.week2.day2.ReflectionFileHelper;
 
-import com.sun.xml.internal.bind.v2.model.core.ClassInfo;
-
 import java.io.FileWriter;
 
 /**
@@ -9,8 +7,8 @@ import java.io.FileWriter;
  */
 public class Saver implements ISaver {
     @Override
-    public void save(Object o) {
-        ClassInfo classInfo = null;
+    public void save(Object o) throws IllegalAccessException {
+        ClassInfo classInfo = new ClassInfo();
         String className = classInfo.getClass(o);
         String[] classFields = classInfo.getFieldInfo(o);
 
