@@ -21,7 +21,12 @@ public class ClassInfoImpl implements IClassInfo {
         for(int i = 0; i < fields.length; i++){
             int mod = fields[i].getModifiers();
 
-            stringFileds[i] = Modifier.toString(mod) + " " + fields[i].getType().getSimpleName() + " " + fields[i].getName();
+            try {
+                fields[i].setAccessible(true);
+                stringFileds[i] = Modifier.toString(mod) + " " + fields[i].getType().getSimpleName() + " " + fields[i].getName() + "=" + fields[i].get(o);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
         }
         return stringFileds;
     }
