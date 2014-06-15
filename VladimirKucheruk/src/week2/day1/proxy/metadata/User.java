@@ -1,12 +1,14 @@
-package ua.artcode.week2.day1.metadata;
+package week2.day1.proxy.metadata;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * Created by admin on 14.06.2014.
+ * Created by vkucheru on 14.06.2014.
  */
 
-@MyAnnotation(login = "Serhii", pass = 22)
+@MyAnnotation(login="Admin", pass = "25")
 public class User {
-
     private String login;
     private String pass;
 
@@ -29,17 +31,5 @@ public class User {
 
     public void setPass(String pass) {
         this.pass = pass;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "login='" + login + '\'' +
-                ", pass='" + pass + '\'' +
-                '}';
-    }
-
-    public void showParams(String word){
-        System.out.println(word);
     }
 }
