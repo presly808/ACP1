@@ -1,7 +1,6 @@
 package ua.artcode.week2.day2.reflection;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 
 /**
  * Created by amakogon on 15.06.2014.
@@ -9,26 +8,38 @@ import java.io.PrintWriter;
 public class SaverImpl implements ISaver {
 
     private final static String FILE_PATH = "D:/ArtCode/users.txt";
+    private final static String SEPARATOR = "-----";
 
     @Override
-    public void save(Object o) {
+    public void save(Object o) throws IOException {
         IClassInfo classInfo = new ClassInfoImpl();
         try {
-            PrintWriter writer = new PrintWriter(FILE_PATH);
+            FileWriter writer = new FileWriter(FILE_PATH, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(writer);
             String className = classInfo.getClassName(o);
             String[] fields = classInfo.getFieldInfo(o);
-            writer.println(className);
+            bufferedWriter.write(className + "\n");
             for (String s : fields) {
-                writer.println(s);
+                bufferedWriter.write(s + "\n");
             }
-            writer.flush();
+            bufferedWriter.write(SEPARATOR + "\n");
+            bufferedWriter.flush();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public String[] load() {
-        return new String[0];
+    public String[] load() throws IOException {
+        FileReader reader = new FileReader(FILE_PATH);
+        BufferedReader bufferedReader = new BufferedReader(reader);
+        StringBuilder builder = new StringBuilder();
+        String line = "";
+        while ((line = bufferedReader.readLine()) != null) {
+            builder.append("\n" + line);
+
+        }
+        String[] users = builder.toString().split(SEPARATOR);
+        return users;
     }
 }

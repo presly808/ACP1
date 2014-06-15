@@ -16,6 +16,9 @@ public class User {
         this.pass = pass;
     }
 
+    public User() {
+    }
+
     public String getLogin() {
         return login;
     }
