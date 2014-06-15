@@ -38,4 +38,8 @@ public class User {
                 ", pass='" + pass + '\'' +
                 '}';
     }
+
+    public void showParams(String word){
+        System.out.println(word);
+    }
 }
