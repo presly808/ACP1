@@ -10,7 +10,7 @@ public class ClassInfoImpl implements IClassInfo {
     @Override
     public String getClass(Object o) {
         Class oClass = o.getClass();
-        return oClass.getSimpleName();
+        return oClass.getName();
     }
 
     @Override
