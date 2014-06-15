@@ -17,9 +17,9 @@ public class ClassInfo implements IClassInfo {
     @Override
     public String [] getFieldInfo(Object o) throws IllegalAccessException {
         int index = 0;
-        String[] array = new String[100];
         Class cl = o.getClass();
         Field[] declaredFields = cl.getDeclaredFields();
+        String[] array = new String[declaredFields.length];
 
         for (Field f : declaredFields) {
             int id = f.getModifiers();
