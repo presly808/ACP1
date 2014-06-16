@@ -6,7 +6,8 @@
 
 2. To finish stated tasks
     2.1. Serialization using reflection
-    2.2. Implement Buffered reading from (InputStream, Reader)
+        (Save only those fields that were annotated by @ForSave Annotation, first create @ForSave)
+        If field has no default value, just get default value from annotation
 
 3. Write own implementation of Scanner (based on Decorator pattern)
         -String next()
