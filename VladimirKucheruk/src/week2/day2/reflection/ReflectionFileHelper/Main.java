@@ -13,9 +13,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
-        User user = new User();
-        user.setName("Vova");
-        user.setAge(25);
+        User user = new User("Vova", 25);
         System.out.println("Обьект перед сериализацией ================= "+user);
         SaverLoader saverLoader = new SaverLoader();
         saverLoader.save(user, "d:/reflation_test.txt");
