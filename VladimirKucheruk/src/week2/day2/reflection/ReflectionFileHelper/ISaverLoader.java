@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by mike on 6/15/14.
  */
-public interface ISaver {
+public interface ISaverLoader {
 
     void save(Object o, String fileName) throws IOException, IllegalAccessException;
     List<String> load(String fileName) throws FileNotFoundException;

@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Created by vkucheru on 15.06.2014.
  */
-public class Saver implements ISaver {
+public class SaverLoader implements ISaverLoader {
     @Override
     public void save(Object o, String fileName) throws IllegalAccessException, IOException {
         ClassInfo classInfo = new ClassInfo();

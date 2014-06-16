@@ -17,10 +17,10 @@ public class Main {
         user.setName("Vova");
         user.setAge(25);
         System.out.println("Обьект перед сериализацией ================= "+user);
-        Saver saver = new Saver();
-        saver.save(user, "d:/reflation_test.txt");
+        SaverLoader saverLoader = new SaverLoader();
+        saverLoader.save(user, "d:/reflation_test.txt");
         List<String> list = new ArrayList<String>();
-        list = saver.load("d:/reflation_test.txt");
+        list = saverLoader.load("d:/reflation_test.txt");
         String className = list.get(0).toString();
         list.remove(className);
         Class cls = Class.forName(className);
