@@ -1,0 +1,26 @@
+1. Theoretical material
+    Annotations, GIT branching
+    patterns Proxy and Decorator
+    Reflection API, Java IO, IO Filter
+    Modules in IDEA and other settings
+
+2. To finish stated tasks
+    2.1. Serialization using reflection
+    2.2. Implement Buffered reading from (InputStream, Reader)
+
+3. Write own implementation of Scanner (based on Decorator pattern)
+        -String next()
+        -int nextInt()
+        -String nextLine()
+        -boolean hasNext()
+        -boolean hasNextInt()
+        -useDelemiter(String)
+        -close()
+
+4. Write class Timer, that performs some action in defined period of time
+    - start(long delay, Action action) // Action is your own interface with one method, for ex. see ActionListener inteface
+    - stop()
+
+4. Dynamic sorter
+    Sort numbers which are placed in file with defined frequency
+    Use class Timer above
