@@ -1,0 +1,15 @@
+1. Repeat material
+   Java IO, Buffers in IO
+   pattern Builder, Immutable class
+   Thread, Runnable, sleep, join, start
+   synchronized
+
+2. Find file in file system using threads for faster results
+    file paths which have been found, save into one common file results.txt
+
+3. Sort array using tree threads
+    Each thread knows its part of array
+    After sorting, separate thread merge results of sorting
+
+4*. Write synchronous chat via (ServerSocket, Socket) for two users
+    One side establishes connection(ServerSocket), another connects to(Socket)
