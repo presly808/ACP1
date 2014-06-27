@@ -8,6 +8,7 @@ import java.util.Date;
 public class ThreadTimer {
 
     public static void main(String[] args) throws InterruptedException {
+
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
