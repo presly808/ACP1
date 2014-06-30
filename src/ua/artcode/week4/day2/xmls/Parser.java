@@ -16,22 +16,39 @@ import java.io.IOException;
  */
 public class Parser {
 
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document =
-                builder.parse(Parser.class.getResource("company.xml").toString());
-        NodeList nodeList = document.getElementsByTagName("employee");
+    private static final String PATH = "company.xml";
 
-        for (int i = 0; i < nodeList.getLength(); i++) {
-            Node node = nodeList.item(i);
+    public static void showXML() throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = dbf.newDocumentBuilder();
+        Document d = builder.parse(String.valueOf(Parser.class.getResource(PATH)));
+
+        Element el = d.getDocumentElement();
+        showElement(el.getChildNodes(),"");
+
+    }
+
+    public static void showElement(NodeList childs, String spaces){
+        for (int i = 0; i < childs.getLength(); i++) {
+            Node node = childs.item(i);
             if(node.getNodeType() == Node.ELEMENT_NODE){
-                Element element = (Element) node;
-                System.out.println( element.getTagName());
-                System.out.println(element.getNodeValue());
+
+                Element el = (Element) childs.item(i);
+                System.out.println(spaces + "<"+el.getTagName()+">");
+                if(el.hasChildNodes()){
+                    showElement(el.getChildNodes(), spaces + "\t");
+                }
+                System.out.println(spaces + "</"+el.getTagName()+">");
+            } else if(node.getNodeType() == Node.TEXT_NODE) {
+                if(!node.getNodeValue().contains("\n")){
+                    System.out.println("\t\t" + node.getNodeValue());
+                }
             }
         }
+    }
 
+    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
+        showXML();
     }
 
 }
