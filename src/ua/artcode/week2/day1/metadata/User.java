@@ -10,6 +10,9 @@ public class User {
     private String login;
     private String pass;
 
+    public User() {
+    }
+
     public User(String pass, String login) {
         this.pass = pass;
         this.login = login;

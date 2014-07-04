@@ -5,7 +5,7 @@ package week2.day2.reflection;
  */
 public class Main {
     public static void main(String[] args) throws IllegalAccessException {
-        User user = new User("Igor", 25);
-        Ref.showInfoRef(user);
+//        User user = new User("Igor", 25);
+//        Ref.showInfoRef(user);
     }
 }

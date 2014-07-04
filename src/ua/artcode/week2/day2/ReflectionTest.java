@@ -2,19 +2,30 @@ package ua.artcode.week2.day2;
 
 import ua.artcode.week2.day1.metadata.User;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 
 /**
  * Created by admin on 15.06.2014.
  */
 public class ReflectionTest {
 
-    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {
+    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException, NoSuchMethodException {
         User u1 = new User("12345", "presly");
-        showInfo(u1);
+        Class cl = u1.getClass();
+        User newU = (User) cl.newInstance();
+        Constructor cons = cl.getConstructor(String.class, String.class);
+        User userFromConst = (User) cons.newInstance("44444", "new login");
+
+        System.out.println(userFromConst);
+
+        Field f1 = cl.getDeclaredField("pass");
+        f1.setAccessible(true);
+        f1.set(newU, "44444");
+        Field f2 = cl.getDeclaredField("login");
+        f2.setAccessible(true);
+        f2.set(newU, "new login");
+
+        System.out.println(newU);
     }
 
     public static void showInfo(Object o) throws IllegalAccessException, InvocationTargetException {

@@ -16,6 +16,10 @@ public class User {
         this.age = age;
     }
 
+    public User() {
+
+    };
+
     @Override
     public String toString() {
         return "User{" +
