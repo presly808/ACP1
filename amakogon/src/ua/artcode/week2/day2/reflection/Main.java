@@ -13,8 +13,8 @@ public class Main {
         ISaver saver = new SaverImpl();
         User user1 = new User("Artem", "Pass");
         User user2 = new User("Sergio", "Password");
-//        saver.save(user1);
-//        saver.save(user2);
+        saver.save(user1);
+        saver.save(user2);
 
 
         String[] allUsers = saver.load();
