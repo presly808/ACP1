@@ -1,0 +1,19 @@
+1. Theoretical material
+    class Properties, pattern Observer,
+    pattern ProducerConsumer, volatile,
+    ArrayBlockingQueue, LinkedBlockingQueue
+    class (Lock, Condition)
+
+    TDD, Extreme Programming, JUnit
+    Maven(Plugins, Goals, Dependencies)
+
+2. Apply maven to your module
+
+3. To finish chat
+
+4. Write tests for chat and for your HashSet
+
+If you want more tasks, just ask me)
+
+
+
