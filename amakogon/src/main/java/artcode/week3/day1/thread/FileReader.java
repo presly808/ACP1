@@ -1,4 +1,4 @@
-package main.java.artcode.week3.day1.thread;
+package artcode.week3.day1.thread;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

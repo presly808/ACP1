@@ -1,4 +1,4 @@
-package main.java.artcode.week2.homework;
+package artcode.week2.homework;
 
 import java.io.Closeable;
 import java.io.IOException;

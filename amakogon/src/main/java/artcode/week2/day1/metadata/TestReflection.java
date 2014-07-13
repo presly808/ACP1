@@ -1,4 +1,4 @@
-package main.java.artcode.week2.day1.metadata;
+package artcode.week2.day1.metadata;
 
 import java.lang.reflect.Field;
 

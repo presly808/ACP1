@@ -1,4 +1,4 @@
-package main.java.artcode.week5.day1.observer;
+package artcode.week5.day1.observer;
 
 
 /**

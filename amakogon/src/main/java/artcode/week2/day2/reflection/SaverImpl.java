@@ -1,10 +1,11 @@
-package main.java.artcode.week2.day2.reflection;
+package artcode.week2.day2.reflection;
 
 import java.io.*;
 
 /**
  * Created by amakogon on 15.06.2014.
  */
+
 public class SaverImpl implements ISaver {
 
     private final static String FILE_PATH = "D:/ArtCode/users.txt";

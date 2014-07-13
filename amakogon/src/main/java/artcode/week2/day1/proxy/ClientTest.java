@@ -1,4 +1,4 @@
-package main.java.artcode.week2.day1.proxy;
+package artcode.week2.day1.proxy;
 
 /**
  * Created by amakogon on 14.06.2014.

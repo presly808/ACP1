@@ -1,4 +1,4 @@
-package main.java.artcode.week2.homework.Timer;
+package artcode.week2.homework.Timer;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package main.java.artcode.week5.day1;
+package artcode.week5.day1;
 
 import java.io.File;
 import java.io.FileInputStream;

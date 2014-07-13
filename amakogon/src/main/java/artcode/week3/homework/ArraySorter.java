@@ -1,4 +1,4 @@
-package main.java.artcode.week3.homework;
+package artcode.week3.homework;
 
 /**
  * Created by amakogon on 26.06.2014.

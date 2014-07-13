@@ -1,6 +1,6 @@
-package main.java.artcode.week2.day2.reflection;
+package artcode.week2.day2.reflection;
 
-import main.java.artcode.week2.day1.metadata.User;
+import artcode.week2.day1.metadata.User;
 
 import java.io.IOException;
 import java.util.List;

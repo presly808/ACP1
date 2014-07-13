@@ -1,4 +1,4 @@
-package main.java.artcode.week4.day1;
+package artcode.week4.day1;
 
 /**
  * Created by amakogon on 28.06.2014.

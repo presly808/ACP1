@@ -1,4 +1,4 @@
-package main.java.artcode.week4.day1.chat;
+package artcode.week4.day1.chat;
 
 import java.io.IOException;
 import java.io.InputStream;

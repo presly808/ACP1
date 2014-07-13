@@ -1,4 +1,4 @@
-package main.java.artcode.week5.day2;
+package artcode.week5.day2;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package main.java.artcode.week2.day2.reflection;
+package artcode.week2.day2.reflection;
 
 import java.lang.reflect.Field;
 import java.util.LinkedList;

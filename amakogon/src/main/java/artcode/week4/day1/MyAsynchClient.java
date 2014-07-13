@@ -1,4 +1,4 @@
-package main.java.artcode.week4.day1;
+package artcode.week4.day1;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;

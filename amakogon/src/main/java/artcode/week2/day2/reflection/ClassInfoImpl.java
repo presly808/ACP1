@@ -1,6 +1,6 @@
-package main.java.artcode.week2.day2.reflection;
+package artcode.week2.day2.reflection;
 
-import main.java.artcode.week2.day1.metadata.MyAnnotation;
+import artcode.week2.day1.metadata.MyAnnotation;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

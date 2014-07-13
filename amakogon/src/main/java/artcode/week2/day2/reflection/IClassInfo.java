@@ -1,4 +1,4 @@
-package main.java.artcode.week2.day2.reflection;
+package artcode.week2.day2.reflection;
 
 /**
  * Created by amakogon on 15.06.2014.

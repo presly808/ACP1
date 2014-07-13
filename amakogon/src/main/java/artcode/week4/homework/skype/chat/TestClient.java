@@ -1,4 +1,4 @@
-package main.java.artcode.week4.homework.skype.chat;
+package artcode.week4.homework.skype.chat;
 
 import java.util.Scanner;
 

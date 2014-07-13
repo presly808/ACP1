@@ -1,4 +1,4 @@
-package main.java.artcode.week3.homework;
+package artcode.week3.homework;
 
 import java.io.BufferedWriter;
 import java.io.File;
