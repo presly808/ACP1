@@ -1,6 +1,7 @@
 package ua.artcode.week5.day2.unit_te;
 
-import org.junit.Assert;
+
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,8 +22,6 @@ public class TestMath {
     @Test
     public void testRandom(){
         Double actual = Math.random();
-
-        Assert.assertNotEquals(0 , actual);
 
         Assert.assertEquals(10, actual, 1);
         Assert.assertSame(Double.class, actual.getClass());

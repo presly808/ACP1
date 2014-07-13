@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<garage>
+    <cars>
+        <car>
+            <distance>1000.0</distance>
+            <model>subaru</model>
+        </car>
+        <car>
+            <distance>2000.0</distance>
+            <model>lanos</model>
+        </car>
+    </cars>
+</garage>

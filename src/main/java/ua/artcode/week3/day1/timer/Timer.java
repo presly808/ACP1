@@ -13,12 +13,13 @@ public class Timer {
 
     public void start(){
         long start = System.currentTimeMillis();
-        while(true){
+        while(!Thread.currentThread().isInterrupted()){
             if((System.currentTimeMillis() - start) / 1000 >= 3){
                 action.perform();
                 start = System.currentTimeMillis();
             }
         }
+
     }
 
 }
