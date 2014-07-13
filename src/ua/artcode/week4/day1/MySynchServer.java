@@ -27,8 +27,6 @@ public class MySynchServer {
         InputStream inputStream = socket.getInputStream();
         BufferedReader socketOutput = new BufferedReader(new InputStreamReader(inputStream));
 
-
-
         while (true) {
             System.out.println("Write message");
             printWriter.println(console.readLine());
