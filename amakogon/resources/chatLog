@@ -1,16 +1,8 @@
-лип 04, 2014 10:09:19 PM ua.artcode.week4.homework.skype.chat.ChatServer startServer
+лип 05, 2014 3:33:05 PM ua.artcode.week4.homework.skype.chat.ChatServer startServer
 INFO: client connected: /127.0.0.1:5000
-лип 04, 2014 10:09:24 PM ua.artcode.week4.homework.skype.chat.ChatServer startServer
+лип 05, 2014 3:33:14 PM ua.artcode.week4.homework.skype.chat.ChatServer startServer
 INFO: client connected: /127.0.0.1:5000
-лип 04, 2014 10:09:37 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: kukudina : hello
-лип 04, 2014 10:09:42 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: artem : hi
-лип 04, 2014 10:09:54 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: kukudina : how you doin?
-лип 04, 2014 10:09:59 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: artem : fina
-лип 04, 2014 10:10:37 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: ^^&&^^exit!@qwe
-лип 04, 2014 10:10:39 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
-INFO: ^^&&^^exit!@qwe
+лип 05, 2014 3:33:23 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
+INFO: Andrey : privet
+лип 05, 2014 3:33:30 PM ua.artcode.week4.homework.skype.chat.ChatServer$ClientHandler run
+INFO: Vova : kak dela
