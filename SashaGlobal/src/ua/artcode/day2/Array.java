@@ -33,7 +33,24 @@ public class Array {
 
     //TODO
     public void insert(int pos, int val){
+        if(index >= mas.length) {
+            resizeMas(mas.length * 2);
+        }
+        offset(pos, 1, true);
 
+        mas[pos] = val;
+    }
+
+    private void offset(int pos, int offset, boolean way){
+        if(way){
+            for(int i = index - 1; i >= pos; i--){
+                mas[i+offset] = mas[i];
+            }
+        } else {
+            for(int i = pos + 1; i < index; i++){
+                mas[i-offset] = mas[i];
+            }
+        }
     }
 
     public int remove(){
@@ -43,7 +60,10 @@ public class Array {
 
     //TODO
     public int remove(int pos){
-        return -1;
+        int removed = mas[pos];
+        offset(pos, 1, false);
+        index--;
+        return removed;
     }
 
     private void resizeMas(int newSize){

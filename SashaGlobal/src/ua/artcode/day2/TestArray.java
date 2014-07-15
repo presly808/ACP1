@@ -17,11 +17,14 @@ public class TestArray {
          * */
 
 
-        Array array = new Array(5);
+        Array array = new Array(11);
 
         for(int i = 0; i < 10; i++){
             array.insert(i);
         }
+
+        array.insert(3, 66);
+        array.remove(3);
 
         array.printArr();
 
