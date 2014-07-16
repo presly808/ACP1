@@ -42,7 +42,7 @@ INSERT INTO companies (c_name, c_money, bithday)
 INSERT INTO companies (c_name, c_money, bithday)
  VALUES ('InventC', 1233456, '2010-08-15');
 
-INSERT INTO employees (user_name, user_age)
+INSERT INTO IF employees (user_name, user_age)
  VALUES ('Vova', 27);
 
 INSERT INTO employees (user_name, user_age)
