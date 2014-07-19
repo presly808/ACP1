@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--root-->
+<!--Ctrl + Alt + L-->
+<company>
+
+    <employee id="1">
+        <name>Serg</name>
+        <age>23</age>
+    </employee>
+
+    <employee id="2">
+        <name>Anton</name>
+        <age>26</age>
+    </employee>
+
+</company>
