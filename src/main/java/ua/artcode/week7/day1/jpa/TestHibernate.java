@@ -1,4 +1,4 @@
-package ua.artcode.week6.day2;
+package ua.artcode.week7.day1.jpa;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,6 +22,7 @@ public class TestHibernate {
         entityTransaction.begin();
         entityManager.persist(man);
         entityTransaction.commit();
+
 
         Query query = entityManager.createQuery("SELECT m from Man m where m.name = :name").setParameter("name", "Serhii");
         List<Man> list = query.getResultList();

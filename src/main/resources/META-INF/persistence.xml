@@ -8,7 +8,11 @@
             Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
         </description>
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>ua.artcode.week6.day2.Man</class>
+
+        <class>ua.artcode.week7.day1.jpa.Man</class>
+        <class>ua.artcode.week7.day1.jpa.Book</class>
+        <class>ua.artcode.week7.day1.jpa.Author</class>
+
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
@@ -18,8 +22,8 @@
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
-            <property name="hibernate.connection.pool_size" value="5"/>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.connection.pool_size" value="1"/>
         </properties>
 
     </persistence-unit>

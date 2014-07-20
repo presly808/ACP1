@@ -1,4 +1,4 @@
-package ua.artcode.week6.day2;
+package ua.artcode.week7.day1.jpa;
 
 import javax.persistence.*;
 import java.util.Date;
