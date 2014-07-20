@@ -1,10 +1,14 @@
 package ua.artcode.week7.day2.jpa;
 
+import org.hibernate.criterion.Restrictions;
 import ua.artcode.week7.day1.jpa.Author;
 import ua.artcode.week7.day1.jpa.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Root;
+import java.beans.Expression;
 import java.util.List;
 
 /**
@@ -30,7 +34,7 @@ public class TestRelationsJpa {
 
         //findById(3L, entityManager);
         findBookById(1L, entityManager);
-
+        findByName("Andrey", entityManager);
     }
 
     public static void findById(Long id, EntityManager entityManager) {
@@ -41,8 +45,17 @@ public class TestRelationsJpa {
 
     public static void findBookById(Long id, EntityManager entityManager) {
         Book book = entityManager.find(Book.class, id);
-
-        System.out.println(book.getAuthor().getName());
     }
+
+    public static void findByName(String name, EntityManager entityManager){
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        javax.persistence.criteria.CriteriaQuery query = criteriaBuilder.createQuery(Author.class);
+        Root<Author> authorRoot = query.from(Author.class);
+        for(Object author : query.getOrderList()){
+            System.out.println(author);
+        }
+    }
+
+
 
 }
