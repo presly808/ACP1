@@ -4,13 +4,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-
-
-
-    <bean id="testBean" class="ua.artcode.week8.test.DataHandler">
+    <bean id="dataHandler" class="ua.artcode.week8.test.DataHandler" scope="singleton">
         <property name="host" value="192.168.1.1"/>
         <property name="port" value="9999"/>
     </bean>
 
+    <bean id="date" class="java.util.Date"/>
+
+
+
+    <bean id="container" class="ua.artcode.week8.test.DataContainer" scope="prototype" depends-on="dataHandler">
+        <constructor-arg name="start" ref="date"/>
+        <constructor-arg name="millis">
+            <bean id="millis" class="java.lang.Long">
+                <constructor-arg name="s" value="101010"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name="dataHandler" ref="dataHandler"/>
+    </bean>
 </beans>
