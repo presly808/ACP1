@@ -10,8 +10,11 @@ public class TestAppContext {
 
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application-context.xml");
-        DataHandler dataHandler = (DataHandler) ac.getBean("testBean");
+        DataHandler dataHandler = (DataHandler) ac.getBean("dataHandler");
         System.out.println(dataHandler);
+        dataHandler.setHost("new");
+        dataHandler = (DataHandler) ac.getBean("dataHandler");
+
 
     }
 }
