@@ -10,9 +10,9 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <bean id="greetingService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
-        <property name="serviceUrl" value="rmi://localhost:1099/greetingService"/>
-        <property name="serviceInterface" value="ua.artcode.week8.rmi.server.RemoteService"/>
+    <bean id="remoteService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:1099/remoteService"/>
+        <property name="serviceInterface" value="ua.artcode.week8.rmi.client.RemoteService"/>
     </bean>
 
 </beans>

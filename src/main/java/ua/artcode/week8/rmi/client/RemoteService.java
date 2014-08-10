@@ -7,4 +7,6 @@ public interface RemoteService {
 
     String getMessage();
 
+    String sendMessage(String message);
+
 }
