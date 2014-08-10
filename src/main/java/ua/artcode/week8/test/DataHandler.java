@@ -1,11 +1,15 @@
 package ua.artcode.week8.test;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by admin on 09.08.2014.
  */
+@Component
+@Scope(value = "singleton")
 public class DataHandler {
 
     private String host;
