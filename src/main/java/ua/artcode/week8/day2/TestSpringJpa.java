@@ -14,7 +14,7 @@ import javax.persistence.EntityManagerFactory;
 public class TestSpringJpa {
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:week8_orm/application-context.xml");
-        UserDAO userDAO = ac.getBean("userDAOImpl", UserDAOImpl.class);
+        UserDAO userDAO = (UserDAO) ac.getBean("userDAOImpl");
 
         Author a = new Author();
         a.setName("Kostia");
