@@ -1,4 +1,4 @@
-package ua.artcode.test;
+package ua.artcode.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
