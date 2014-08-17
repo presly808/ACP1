@@ -6,8 +6,17 @@
     <title></title>
 </head>
 <body>
-    id : ${product}<br/>
+
+    id : ${product.id}<br/>
     name : ${product.name}<br/> <%--(Product)request.getAttribute("product")).getName() --%>
-    price : ${product.price}
+    price : ${product.price}<br/>
+    <br/>
+
+    Test scriplet for
+    <% for(int i = 0; i < 10; i++) {%>
+        <%= "iter " + i%>
+    <%}%>
+
+
 </body>
 </html>

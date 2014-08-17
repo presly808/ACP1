@@ -1,5 +1,8 @@
 package ua.artcode.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ejb.interceptor.SpringBeanAutowiringInterceptor;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import ua.artcode.dao.ProductDao;
 import ua.artcode.entity.Product;
 
@@ -14,17 +17,16 @@ import java.io.PrintWriter;
 /**
  * Created by admin on 16.08.2014.
  */
-public class ProductServletController extends HttpServlet {
+public class ProductServletController extends SpringInjectionProcessServlet {
 
-    private ProductDao productDao = new ProductDao();
+    @Autowired
+    private ProductDao productDao;
 
     private static final String PARAM_ID = "id";
     private static final String PRODUCT_PAGE = "WEB-INF/pages/product.jsp";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
 
         String param = req.getParameter(PARAM_ID);
         Product product = productDao.find(Integer.parseInt(param));
