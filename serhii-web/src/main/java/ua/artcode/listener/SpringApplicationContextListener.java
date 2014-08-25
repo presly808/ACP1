@@ -20,6 +20,7 @@ public class SpringApplicationContextListener implements ServletContextListener 
         System.out.println("Init spring context");
         String path = sce.getServletContext().getInitParameter("spring-context");
         applicationContext = new ClassPathXmlApplicationContext(path);
+        sce.getServletContext().setAttribute("spring-context", applicationContext);
     }
 
     @Override

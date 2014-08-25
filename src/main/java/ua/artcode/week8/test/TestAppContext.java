@@ -13,6 +13,8 @@ public class TestAppContext {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application-context.xml");
 
         DataContainer dc = ac.getBean("dataContainer",DataContainer.class);
+        dc.getStart();
+        dc.getMillis();
 
         System.out.println();
 

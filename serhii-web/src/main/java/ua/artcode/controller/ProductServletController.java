@@ -1,5 +1,6 @@
 package ua.artcode.controller;
 
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ejb.interceptor.SpringBeanAutowiringInterceptor;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -21,6 +22,10 @@ public class ProductServletController extends SpringInjectionProcessServlet {
 
     @Autowired
     private ProductDao productDao;
+
+    public void setProductDao(ProductDao productDao) {
+        this.productDao = productDao;
+    }
 
     private static final String PARAM_ID = "id";
     private static final String PRODUCT_PAGE = "WEB-INF/pages/product.jsp";

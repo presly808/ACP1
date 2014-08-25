@@ -17,6 +17,8 @@ public class VisitCounterController extends HttpServlet {
 
     public static final String COUNT = "count";
 
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session= req.getSession();
